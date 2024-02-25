@@ -6,7 +6,7 @@ WORKDIR /home/biosim
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 #RUN chown -R biosim:biosim /home/biosim
-#RUN chmod 777 /home/biosim
+RUN chmod 777 -R /home/biosim
 USER biosim
 COPY . .
 CMD ["bash"]
